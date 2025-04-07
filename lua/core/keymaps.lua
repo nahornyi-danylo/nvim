@@ -15,14 +15,8 @@ vim.opt.shiftround = true
 vim.opt.expandtab = true
 
 vim.cmd("set number")
+vim.cmd("set relativenumber")
 vim.cmd("set notermguicolors")
 
 vim.keymap.set('n', 'zz', function() vim.cmd("cd %:p:h") end)
-
---vim.api.nvim_set_keymap('i', '"', '""<left>', { noremap = true })
---vim.api.nvim_set_keymap('i', "'", "''<left>", { noremap = true })
---vim.api.nvim_set_keymap('i', '<', '<><left>', { noremap = true })
---vim.api.nvim_set_keymap('i', '(', '()<left>', { noremap = true })
---vim.api.nvim_set_keymap('i', '[', '[]<left>', { noremap = true })
---vim.api.nvim_set_keymap('i', '{', '{}<left>', { noremap = true })
 
