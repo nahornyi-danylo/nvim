@@ -19,4 +19,5 @@ vim.cmd("set relativenumber")
 vim.cmd("set notermguicolors")
 
 vim.keymap.set('n', 'zz', function() vim.cmd("cd %:p:h") end)
+vim.keymap.set('n', '<Esc>', function() vim.cmd("nohlsearch") end, { silent = true })
 
