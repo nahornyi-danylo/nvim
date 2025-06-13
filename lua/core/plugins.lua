@@ -41,6 +41,9 @@ return require('packer').startup(function(use)
   use("rafamadriz/friendly-snippets")
   use("neovim/nvim-lspconfig") -- Easily configure language servers
   use("hrsh7th/cmp-nvim-lsp") -- For autocompletion
+
+  use("nvim-treesitter/nvim-treesitter-textobjects")
+  use { "nvim-treesitter/playground", cmd = "TSPlaygroundToggle" }
   use({
     "glepnir/lspsaga.nvim",
     branch = "main",
