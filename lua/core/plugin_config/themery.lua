@@ -11,6 +11,13 @@ require("themery").setup({
       colorscheme = "sweetie",
       before = [[vim.opt.background = "light"]],
     },
+
+
+    {
+      name = "Everblush",
+      colorscheme = "everblush",
+      before = [[vim.opt.background = "dark"]],
+    },
   },
   livePreview = true,
 })
