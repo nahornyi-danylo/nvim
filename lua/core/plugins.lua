@@ -12,27 +12,30 @@ end
 local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
-  use 'wbthomason/packer.nvim'
-  use 'nvim-tree/nvim-tree.lua'
-  use 'nvim-tree/nvim-web-devicons'
-  use 'nvim-lualine/lualine.nvim'
+  use("wbthomason/packer.nvim")
+  use("nvim-tree/nvim-tree.lua")
+  use("nvim-tree/nvim-web-devicons")
+  use("nvim-lualine/lualine.nvim")
 
-  use 'Mofiqul/dracula.nvim'
-  use 'NTBBloodbath/sweetie.nvim'
-  use {'Everblush/nvim', as = 'everblush'}
+  use("lewis6991/gitsigns.nvim")
 
-  use 'nvim-treesitter/nvim-treesitter'
-  use 'zaldih/themery.nvim'
-  use {
+  use("Mofiqul/dracula.nvim")
+  use("NTBBloodbath/sweetie.nvim")
+  use({"Everblush/nvim", as = "everblush"})
+
+  use("nvim-treesitter/nvim-treesitter")
+  use("zaldih/themery.nvim")
+
+  use({
     'nvim-telescope/telescope.nvim',
     tag = '0.1.4',
     requires = { {'nvim-lua/plenary.nvim'} }
-  }
-  use("williamboman/mason.nvim") -- In charge of managing LSP servers, linters & formatters
-  use("williamboman/mason-lspconfig.nvim") -- Bridges the gap between mason & lspconfig
--- autocompletion
-  use 'm4xshen/autoclose.nvim'
--- Configuring LSP servers
+  })
+
+  use("williamboman/mason.nvim")
+  use("williamboman/mason-lspconfig.nvim")
+  use("m4xshen/autoclose.nvim")
+
   use("hrsh7th/nvim-cmp")
   use("hrsh7th/cmp-buffer")
   use("hrsh7th/cmp-path")
@@ -40,11 +43,12 @@ return require('packer').startup(function(use)
   use("hrsh7th/cmp-nvim-lsp-signature-help")
   use("saadparwaiz1/cmp_luasnip")
   use("rafamadriz/friendly-snippets")
-  use("neovim/nvim-lspconfig") -- Easily configure language servers
-  use("hrsh7th/cmp-nvim-lsp") -- For autocompletion
+  use("neovim/nvim-lspconfig")
+  use("hrsh7th/cmp-nvim-lsp")
 
   use("nvim-treesitter/nvim-treesitter-textobjects")
-  use { "nvim-treesitter/playground", cmd = "TSPlaygroundToggle" }
+
+  use({ "nvim-treesitter/playground", cmd = "TSPlaygroundToggle" })
   use({
     "glepnir/lspsaga.nvim",
     branch = "main",
@@ -52,12 +56,8 @@ return require('packer').startup(function(use)
       { "nvim-tree/nvim-web-devicons" },
       { "nvim-treesitter/nvim-treesitter" },
     },
-}) -- Enhanced LSP UIs  -- My plugins here
-  -- use 'foo1/bar1.nvim'
-  -- use 'foo2/bar2.nvim'
+  })
 
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
   if packer_bootstrap then
     require('packer').sync()
   end
