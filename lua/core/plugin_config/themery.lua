@@ -18,6 +18,12 @@ require("themery").setup({
       colorscheme = "everblush",
       before = [[vim.opt.background = "dark"]],
     },
+
+    {
+      name = "Moonfly",
+      colorscheme = "moonfly",
+      before = [[vim.opt.background = "dark"]],
+    },
   },
   livePreview = true,
 })

@@ -22,6 +22,7 @@ return require('packer').startup(function(use)
   use("Mofiqul/dracula.nvim")
   use("NTBBloodbath/sweetie.nvim")
   use({"Everblush/nvim", as = "everblush"})
+  use("bluz71/vim-moonfly-colors")
 
   use("nvim-treesitter/nvim-treesitter")
   use("zaldih/themery.nvim")
