@@ -23,8 +23,10 @@ return require('packer').startup(function(use)
   use("NTBBloodbath/sweetie.nvim")
   use({"Everblush/nvim", as = "everblush"})
   use("bluz71/vim-moonfly-colors")
+  use("ramojus/mellifluous.nvim")
 
   use("nvim-treesitter/nvim-treesitter")
+  use("hedyhli/outline.nvim")
   use("zaldih/themery.nvim")
 
   use({
@@ -69,6 +71,8 @@ return require('packer').startup(function(use)
       require('render-markdown').setup({})
     end,
   })
+
+  use("lervag/vimtex")
 
   if packer_bootstrap then
     require('packer').sync()

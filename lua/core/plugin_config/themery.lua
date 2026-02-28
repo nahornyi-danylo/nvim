@@ -24,6 +24,18 @@ require("themery").setup({
       colorscheme = "moonfly",
       before = [[vim.opt.background = "dark"]],
     },
+
+    {
+      name = "Mellifluous dark",
+      colorscheme = "mellifluous",
+      before = [[vim.opt.background = "dark"]],
+    },
+
+    {
+      name = "Mellifluous light",
+      colorscheme = "mellifluous",
+      before = [[vim.opt.background = "light"]],
+    },
   },
   livePreview = true,
 })
