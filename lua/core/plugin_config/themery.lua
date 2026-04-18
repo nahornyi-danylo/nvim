@@ -11,6 +11,11 @@ require("themery").setup({
       colorscheme = "catppuccin",
       before = [[vim.opt.background = "dark"]],
     },
+    {
+      name = "Nightfall",
+      colorscheme = "nightfall",
+      before = [[vim.opt.background = "dark"]],
+    },
 
     {
       name = "Sweetie light",
@@ -20,4 +25,3 @@ require("themery").setup({
   },
   livePreview = true,
 })
-

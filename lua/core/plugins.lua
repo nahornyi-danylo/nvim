@@ -18,6 +18,7 @@ return require('packer').startup(function(use)
   use 'nvim-lualine/lualine.nvim'
   use 'nvim-treesitter/nvim-treesitter'
   use("catppuccin/nvim")
+  use("2giosangmitom/nightfall.nvim")
 
   use 'Mofiqul/dracula.nvim'
   use 'NTBBloodbath/sweetie.nvim'

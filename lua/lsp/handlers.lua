@@ -80,6 +80,10 @@ M.on_attach = function(client, bufnr)
 		client.server_capabilities.documentFormattingProvider = false
 	end
 
+	if client:supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint) then
+		vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+	end
+
 	lsp_keymaps(bufnr)
 	local status_ok, illuminate = pcall(require, "illuminate")
 	if not status_ok then
